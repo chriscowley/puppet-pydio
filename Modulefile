@@ -1,0 +1,13 @@
+name          'puppet-pydio'
+version       '0.1.0'
+source        'git://github.com/chriscowley/puppet-pydio.git'
+author        'Chris Cowley'
+license       'Apache License, Version 2.0'
+summary       'Pydio'
+description   'Put Your Data In Orbit'
+project_page  'https://github.com/chriscowley/puppet-pydio'
+
+dependency 'puppetlabs/stdlib'
+dependency 'puppetlabs/apache'
+dependency 'puppetlabs/mysql'
+dependency 'chriscowley/yumrepos'
