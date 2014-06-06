@@ -12,7 +12,6 @@ class pydio::params {
     'RedHat', 'Amazon': {
       $package_name = 'pydio'
       $service_name = 'pydio'
-      $manage_repo  = true
     }
     default: {
       fail("${::operatingsystem} not supported")
