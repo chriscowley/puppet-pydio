@@ -3,7 +3,7 @@
   "checksums": {
     "spec/spec_helper_acceptance.rb": "d15ec54ca077cc2c43691de01b315a6b",
     "templates/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
-    "manifests/install.pp": "164748b6fb9842bd1e02f1bb67b8209b",
+    "manifests/install.pp": "03a97faf33d8e306f012aee916db5769",
     "CONTRIBUTING.md": "ec539f7912da25760720eebf9756ae65",
     "lib/puppet/provider/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
     "files/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
@@ -21,7 +21,7 @@
     "Gemfile": "c5e82cfa4d1e1561518c00bee7ba5ef1",
     "spec/acceptance/class_spec.rb": "dcf39125ea5ef0c3c5d8fd3ceeede1ae",
     "spec/acceptance/nodesets/default.yml": "1091bb0897dc8ee94a391ab1d8e45132",
-    "spec/classes/example_spec.rb": "84a1e1ea5deaa869b32bffd3c936d703",
+    "spec/classes/example_spec.rb": "34e59e745ccde02aa5564cde972bf0b4",
     "Modulefile": "9e66c077e26dbd5883afc42cd315140e",
     "tests/init.pp": "28709c71d8ef413046fa0af642b87240",
     "README.markdown": "c2ff275f054cddb5f25fe5760d08cc7f",

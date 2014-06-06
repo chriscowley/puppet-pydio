@@ -1,7 +1,7 @@
 # == Class pydio::install
 #
 class pydio::install {
-  if $::manage_source == true {
+  if $::manage_repo == true {
     case $::osfamily {
       'RedHat', 'Amazon': {
         yumrepo { 'pydio-stable':
