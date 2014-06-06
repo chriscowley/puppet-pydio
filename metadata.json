@@ -1,0 +1,54 @@
+{
+  "author": "Chris Cowley",
+  "checksums": {
+    "spec/spec_helper_acceptance.rb": "d15ec54ca077cc2c43691de01b315a6b",
+    "templates/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
+    "manifests/install.pp": "164748b6fb9842bd1e02f1bb67b8209b",
+    "CONTRIBUTING.md": "ec539f7912da25760720eebf9756ae65",
+    "lib/puppet/provider/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
+    "files/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
+    ".travis.yml": "3980ca2a9a94b54920386f03282aa681",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "LICENSE": "47bbee59c4c1cb14cc3667035a227be0",
+    "manifests/params.pp": "8b16c75928406f433ffa964904bb1ea2",
+    "manifests/init.pp": "f192bc4471a785763de0a63da28b1ba3",
+    "spec/acceptance/nodesets/centos-64-x64.yml": "7ad72bad9087a52f30c6f7d5600b68dd",
+    "CONTRIBUTORS": "543a8a71e01eda37c381080f771648d6",
+    "manifests/config.pp": "bcd4a4495079006a6d3ee91435a2cd33",
+    "CHANGELOG": "3f30991014ef4131fb9864fbccd2bee4",
+    "Rakefile": "08cf234d01467acc67062d3853d70bcd",
+    ".ruby-gemset": "bda856dc24c5545b84c832f518c8ae00",
+    "Gemfile": "c5e82cfa4d1e1561518c00bee7ba5ef1",
+    "spec/acceptance/class_spec.rb": "dcf39125ea5ef0c3c5d8fd3ceeede1ae",
+    "spec/acceptance/nodesets/default.yml": "1091bb0897dc8ee94a391ab1d8e45132",
+    "spec/classes/example_spec.rb": "84a1e1ea5deaa869b32bffd3c936d703",
+    "Modulefile": "9e66c077e26dbd5883afc42cd315140e",
+    "tests/init.pp": "28709c71d8ef413046fa0af642b87240",
+    "README.markdown": "c2ff275f054cddb5f25fe5760d08cc7f",
+    ".fixtures.yml": "2ee6887cd512b48d3aa08a421a9cd8c9",
+    ".rspec": "cb04b87d38ae2b13a1da477efd2e41ea",
+    "spec/acceptance/nodesets/ubuntu-server-12042-x64.yml": "1091bb0897dc8ee94a391ab1d8e45132",
+    "lib/puppet/type/.gitkeep": "d41d8cd98f00b204e9800998ecf8427e",
+    "spec/classes/coverage_spec.rb": "5b6dfa0dd426aca0ccfae23c0a629f0b",
+    "Guardfile": "3ae8d9a61b870350cc1c8e0d6a9a36e7",
+    ".ruby-version": "3fc233e0a088b27e65834fdb16c12a40",
+    "Gemfile.lock": "0662b537efb06c615f78627f6df8a931"
+  },
+  "dependencies": [
+    {
+      "name": "chriscowley/yumrepos"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": "1.5.0"
+    }
+  ],
+  "description": "Put Your Data In Orbit",
+  "license": "Apache License, Version 2.0",
+  "name": "puppet-pydio",
+  "project_page": "https://github.com/chriscowley/puppet-pydio",
+  "source": "git://github.com/chriscowley/puppet-pydio.git",
+  "summary": "Pydio",
+  "types": [],
+  "version": "0.1.0"
+}
