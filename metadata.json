@@ -22,7 +22,7 @@
     "spec/acceptance/class_spec.rb": "dcf39125ea5ef0c3c5d8fd3ceeede1ae",
     "spec/acceptance/nodesets/default.yml": "1091bb0897dc8ee94a391ab1d8e45132",
     "spec/classes/example_spec.rb": "34e59e745ccde02aa5564cde972bf0b4",
-    "Modulefile": "9e66c077e26dbd5883afc42cd315140e",
+    "Modulefile": "ecbf5cc55116980dd98328aa91a8f8ec",
     "tests/init.pp": "28709c71d8ef413046fa0af642b87240",
     "README.markdown": "c2ff275f054cddb5f25fe5760d08cc7f",
     ".fixtures.yml": "2ee6887cd512b48d3aa08a421a9cd8c9",
@@ -40,7 +40,11 @@
     },
     {
       "name": "puppetlabs/apt",
-      "version_requirement": "1.5.0"
+      "version_requirement": "\u003e1.5.0"
+    },
+    {
+      "name": "puppetlabs/mysql",
+      "version_requirement": "\u003e2.2.3"
     }
   ],
   "description": "Put Your Data In Orbit",
