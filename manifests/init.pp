@@ -14,5 +14,6 @@ class pydio (
   # validate parameters here
 
   class { 'pydio::install': } ->
-  class { 'pydio::config': }
+  class { 'pydio::config': } ->
+  class { 'pydio::selinux': }
 }
