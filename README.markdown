@@ -13,47 +13,95 @@
 
 ##Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves. This is your 30 second elevator pitch for your module. Consider including OS/Puppet version it works with.       
+Module to install and configure Pydio (Put Your Data In Orbit).
+
+Currently only compatible with RHEL6 (and similar), but in general I have left
+hooks in place to allow expansion for other distributions.   
 
 ##Module Description
 
-If applicable, this section should have a brief description of the technology the module integrates with and what that integration enables. This section should answer the questions: "What does this module *do*?" and "Why would I use it?"
+This module only installs/configures Pydio. As a LAMP application however, Pydio
+requires PHP and MySQL. To allow for this it depends on Puppetlab's modules for
+MySQL and Apache.
 
-If your module has a range of functionality (installation, configuration, management, etc.) this is the time to mention it.
+If you would prefer not to manage Apache and MySQL then you do not need to. You
+really should though.
 
 ##Setup
 
 ###What pydio affects
 
-* A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form. 
+* Creates a new yum repository to get the Pydio package
+* Installs said package along with its dependencies:
+  * php
+  * php-gd
+  * php-mcrypt
+  * php-xml
+* SELinux configuration, as defined [here](http://pyd.io/pydio-with-security-enhanced-linux-selinux/)
 
 ###Setup Requirements **OPTIONAL**
 
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
+None
 
 ###Beginning with pydio
 
-The very basic steps needed for a user to get the module up and running. 
-
-If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+```
+node 'pydioserver' {
+  class { 'pydio': }
+}
+``` 
 
 ##Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here. 
+To use with hiera:
+
+site.pp
+
+```
+node 'pydioserver' {
+  hiera_include('classes')
+}
+```
+
+pydioserver.example.com.yaml:
+
+```
+classes:
+  - pydio
+  - mysql::server
+mysql::server::root_password: S3cr3t-hahaha
+mysql::server::databases:
+  pydio:
+    ensure: present
+    charset: utf8
+  test:
+    ensure: absent
+mysql::server::users:
+  pydio@localhost:
+    ensure: present
+    password_hash: '*F3A2A51A9B0F2BE2468926B4132313728C250DBF',
+mysql::server::grants:
+  pydio@localhost/pydio:
+    ensure: present
+    privileges: ALL
+    table: pydio.*
+    user: pydio@localhost
+```
 
 ##Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module. This section should include all of the under-the-hood workings of your module so people know what the module is touching on their system but don't need to mess with things. (We are working on automating this section!)
+Here, list the classes, types, providers, facts, etc contained in your module.
+This section should include all of the under-the-hood workings of your module
+so people know what the module is touching on their system but don't need to
+mess with things. (We are working on automating this section!)
 
 ##Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+RHEL6+ (and compatible)
 
 ##Development
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
+If you have anything to contribute, make pull request on [Github](https://github.com/chriscowley/puppet-pydio)
 
 ##Release Notes/Contributors/Etc **Optional**
 

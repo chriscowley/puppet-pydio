@@ -22,9 +22,9 @@
     "spec/acceptance/class_spec.rb": "dcf39125ea5ef0c3c5d8fd3ceeede1ae",
     "spec/acceptance/nodesets/default.yml": "1091bb0897dc8ee94a391ab1d8e45132",
     "spec/classes/example_spec.rb": "6053aa94c80577fd80ef86c5fb16777c",
-    "Modulefile": "dc17fc00720f6e9dfb85661051669f2e",
+    "Modulefile": "f3300474f0bad09d5761b0b82c14f892",
     "tests/init.pp": "28709c71d8ef413046fa0af642b87240",
-    "README.markdown": "c2ff275f054cddb5f25fe5760d08cc7f",
+    "README.markdown": "daa3f5794e3cb9b57246093771a1c606",
     ".fixtures.yml": "2ee6887cd512b48d3aa08a421a9cd8c9",
     ".rspec": "cb04b87d38ae2b13a1da477efd2e41ea",
     "spec/acceptance/nodesets/ubuntu-server-12042-x64.yml": "1091bb0897dc8ee94a391ab1d8e45132",
@@ -36,9 +36,6 @@
     "Gemfile.lock": "0662b537efb06c615f78627f6df8a931"
   },
   "dependencies": [
-    {
-      "name": "chriscowley/yumrepos"
-    },
     {
       "name": "puppetlabs/apt",
       "version_requirement": "1.5.0"
