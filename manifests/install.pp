@@ -10,16 +10,16 @@ class pydio::install {
         gpgkey    => 'http://dl.ajaxplorer.info/repos/charles@ajaxplorer.info.gpg.key',
       }
     }
-    'Debian': {
-      apt::source { 'pydio':
-        location          => 'http://dl.ajaxplorer.info/repos/apt',
-        release           => 'stable',
-        repos             => 'main',
-        required_packages => 'debian-keyring debian-archive-keyring',
-        key               => '11FFD694',
-        key_source        => 'http://dl.ajaxplorer.info/repos/charles@ajaxplorer.info.gpg.key',
-      }
-    }
+#    'Debian': {
+#      apt::source { 'pydio':
+#        location          => 'http://dl.ajaxplorer.info/repos/apt',
+#        release           => 'stable',
+#        repos             => 'main',
+#        required_packages => 'debian-keyring debian-archive-keyring',
+#        key               => '11FFD694',
+#        key_source        => 'http://dl.ajaxplorer.info/repos/charles@ajaxplorer.info.gpg.key',
+#      }
+#    }
     default: {
       fail("${::operatingsystem} not supported")
     }

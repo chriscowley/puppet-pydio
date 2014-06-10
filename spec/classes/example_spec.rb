@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe 'pydio' do
   context 'supported operating systems' do
-    ['Debian', 'RedHat'].each do |osfamily|
+#    ['Debian', 'RedHat'].each do |osfamily|
+    ['RedHat'].each do |osfamily|
       describe "pydio class without any parameters on #{osfamily}" do
         let(:params) {{ }}
         let(:facts) {{
